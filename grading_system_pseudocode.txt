@@ -1,0 +1,31 @@
+BEGIN
+    // Input student details
+    DISPLAY "Enter student name: "
+    INPUT student_name
+    
+    DISPLAY "Enter student score: "
+    INPUT score
+    
+    // Validate score is between 0 and 100
+    IF score < 0 OR score > 100 THEN
+        DISPLAY "Invalid score! Score must be between 0 and 100."
+    ELSE
+        // Determine grade based on score
+        IF score >= 70 THEN
+            grade = "A"
+        ELSE IF score >= 60 THEN
+            grade = "B"
+        ELSE IF score >= 50 THEN
+            grade = "C"
+        ELSE IF score >= 45 THEN
+            grade = "D"
+        ELSE IF score >= 40 THEN
+            grade = "E"
+        ELSE
+            grade = "F"
+        END IF
+        
+        // Display result
+        DISPLAY student_name + "'s grade is: " + grade
+    END IF
+END
